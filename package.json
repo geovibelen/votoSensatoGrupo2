@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^5.8.0",
     "@react-navigation/native": "react-navigation/native",
     "@react-navigation/stack": "^5.9.0",
     "all": "^0.0.0",
