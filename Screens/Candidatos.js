@@ -4,18 +4,25 @@ import { StyleSheet, Text, View } from "react-native";
 export class Candidatos extends Component {
   render() {
     return (
-      <View style={styles.fila}>
-        <Text>Candidatos</Text>
+      <View style={styles.contenedor}>
+        <Text style={styles.tituloPagina}>Candidatos</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  fila: {
-    // backgroundColor:"red",
+  contenedor: {
     flex: 1,
-    borderBottomColor: "red",
-    borderBottomWidth: 3,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  tituloPagina:{
+    fontSize:40,
+    textAlign:'center',
+    textAlignVertical:'center',
+    color:'#808080',
   },
 });
