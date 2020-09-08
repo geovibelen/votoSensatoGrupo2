@@ -5,6 +5,7 @@ import { Candidatos } from "./Screens/Candidatos";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Encuestas } from "./Screens/Encuestas";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -12,7 +13,8 @@ const Stack = createStackNavigator();
 function TabHome() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="CandidatosScreen" component={Candidatos}></Tab.Screen>
+      <Tab.Screen name="Candidatos" component={Candidatos}></Tab.Screen>
+      <Tab.Screen name="Encuestas" component={Encuestas}></Tab.Screen>
     </Tab.Navigator>
   );
 }
@@ -27,8 +29,13 @@ export default function App() {
         ></Stack.Screen>
 
         <Stack.Screen
-          name="CandidatosScreen"
+          name="Candidatos"
           component={Candidatos}
+        ></Stack.Screen>
+
+        <Stack.Screen
+          name="Encuestas"
+          component={Encuestas}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
