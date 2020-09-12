@@ -7,6 +7,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Encuestas } from "./Screens/Encuestas";
 
+import JURIDICO from "./Screens/Formularios/JURIDICO"
+import PAR_ANT from "./Screens/Formularios/PAR_ANT"
+import TRANSITO from "./Screens/Formularios/TRANSITO"
+import SRI from "./Screens/Formularios/SRI"
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -22,6 +27,7 @@ function TabHome() {
 export default function App() {
   return (
     <NavigationContainer>
+
       <Stack.Navigator initialRouteName="VotoSensatoAdmin">
         <Stack.Screen
           name="VotoSensatoAdmin"
@@ -37,6 +43,25 @@ export default function App() {
           name="Encuestas"
           component={Encuestas}
         ></Stack.Screen>
+
+        <Stack.Screen
+          name='SRI' component={SRI}
+        ></Stack.Screen> 
+
+        <Stack.Screen
+          name='JURIDICO' component={JURIDICO}
+        ></Stack.Screen> 
+
+        <Stack.Screen
+          name='TRANSITO' component={TRANSITO}
+        ></Stack.Screen> 
+
+        <Stack.Screen
+          name='PAR_ANT' component={PAR_ANT}
+        ></Stack.Screen> 
+        
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
