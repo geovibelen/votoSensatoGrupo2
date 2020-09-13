@@ -22,7 +22,11 @@ export class Candidatos extends Component {
                     
         <ActionButton buttonColor="rgba(231,76,60,1)">
 
-            <ActionButton.Item buttonColor='transparent' title="SRI" textContainerStyle='large' onPress={() => this.props.navigation.navigate('SRI')}>
+            <ActionButton.Item 
+              buttonColor='transparent' 
+              title="SRI" 
+              textContainerStyle='large' 
+              onPress={() => this.props.navigation.navigate('SRI')}>
             <Avatar
               size="large"
               rounded
@@ -32,7 +36,10 @@ export class Candidatos extends Component {
             />
             </ActionButton.Item>
 
-            <ActionButton.Item buttonColor='transparent' title="JURÍDICO" onPress={() => this.props.navigation.navigate('JURIDICO')}>
+            <ActionButton.Item 
+              buttonColor='transparent' 
+              title="JURÍDICO" 
+              onPress={() => this.props.navigation.navigate('JURIDICO')}>
             <Avatar
               size="large"
               rounded
@@ -42,7 +49,10 @@ export class Candidatos extends Component {
             />
             </ActionButton.Item>
 
-            <ActionButton.Item buttonColor='transparent' title="TRÁNSITO" onPress={() => this.props.navigation.navigate('TRANSITO')}>
+            <ActionButton.Item 
+              buttonColor='transparent' 
+              title="TRÁNSITO" 
+              onPress={() => this.props.navigation.navigate('TRANSITO')}>
             <Avatar
               size="large"
               source={{
@@ -51,7 +61,10 @@ export class Candidatos extends Component {
             />
             </ActionButton.Item>
             
-            <ActionButton.Item buttonColor='#1abc9c' title="RÉCORD POLÍTICO" onPress={() => this.props.navigation.navigate('PAR_ANT')}>
+            <ActionButton.Item 
+              buttonColor='#1abc9c' 
+              title="RÉCORD POLÍTICO" 
+              onPress={() => this.props.navigation.navigate('PAR_ANT')}>
             <Avatar
               size="large"
               rounded
