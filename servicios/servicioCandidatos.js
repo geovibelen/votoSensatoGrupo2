@@ -5,7 +5,7 @@ export const guardarCandidato = (candidato, fnExito) => {
   global.bdd
     .collection("candidatos")
     .doc(candidato.cedula)
-    .set({ candidato })
+    .set(candidato)
 
     .then(() => {
       Alert.alert("Info", "Canndidato guardado exitosamente");
