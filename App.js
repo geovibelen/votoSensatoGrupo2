@@ -1,4 +1,3 @@
-import { Candidatos } from "./Screens/Candidatos";
 import React, { Component } from "react";
 import { StyleSheet, View, Image, Text, FlatList } from "react-native";
 import { Input, Button, Avatar, ListItem, List } from "react-native-elements";
@@ -11,8 +10,10 @@ import { cargarConfiguracion } from "./utils/conexion";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 import { Encuestas } from "./Screens/Encuestas";
-import { ListaCandidatos } from "./Screens/Formularios/ListaCandidatos";
+import { ListaCandidatos } from "./Screens/ListaCandidatos";
+import { Candidato } from "./Screens/Candidato";
 
 import JURIDICO from "./Screens/Formularios/JURIDICO";
 import PAR_ANT from "./Screens/Formularios/PAR_ANT";
@@ -26,10 +27,10 @@ function TabHome() {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Candidatos"
-        component={Candidatos}
+        name="ListaCandidatos"
+        component={ListaCandidatos}
         options={{
-          tabBarLabel: "Candidatos",
+          tabBarLabel: "ListaCandidatos",
           tabBarIcon: () => <Icon name="user" size={32} color="skyblue" />,
         }}
       ></Tab.Screen>
@@ -57,7 +58,7 @@ export default function App() {
           component={TabHome}
         ></Stack.Screen>
 
-        <Stack.Screen name="Candidatos" component={Candidatos}></Stack.Screen>
+        <Stack.Screen name="Candidato" component={Candidato}></Stack.Screen>
 
         <Stack.Screen name="Encuestas" component={Encuestas}></Stack.Screen>
 
