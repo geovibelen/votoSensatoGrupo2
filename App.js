@@ -6,7 +6,6 @@ import firebase from "firebase";
 import "@firebase/firestore";
 
 import { cargarConfiguracion } from "./utils/conexion";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";

@@ -8,9 +8,8 @@ export class ItemCandidato extends Component {
     return (
       <View style={styles.fila}>
         <Text>
-          {this.props.pCandidato.cedula}{" "}
-          {this.props.pCandidato.candidato.nombre}{" "}
-          {this.props.pCandidato.candidato.apellido}
+          {this.props.pCandidato.cedula} {this.props.pCandidato.nombre}{" "}
+          {this.props.pCandidato.apellido}
         </Text>
       </View>
     );

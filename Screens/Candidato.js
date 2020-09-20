@@ -6,6 +6,11 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import firebase from "firebase";
 import "@firebase/firestore";
 
+import {
+  guardarCandidato,
+  recuperarCandidato,
+} from "../servicios/servicioCandidatos";
+
 export class Candidato extends Component {
   constructor() {
     super();
@@ -114,7 +119,7 @@ export class Candidato extends Component {
                 title="Guardar"
                 buttonStyle={styles.estiloBoton}
                 onPress={() => {
-                  guardarContacto(
+                  guardarCandidato(
                     {
                       cedula: this.state.cedula,
                       nombre: this.state.nombre,
@@ -125,27 +130,11 @@ export class Candidato extends Component {
                   );
                 }}
               ></Button>
-
-              <Button
-                title="Recuperar"
-                buttonStyle={styles.estiloBoton}
-                onPress={() => {
-                  recuperarContacto(this.repintarLista);
-                  console.log(recuperarContacto);
-                }}
-              ></Button>
             </View>
           </View>
 
           <View style={styles.pie}>
-            <Avatar
-              rounded
-              source={{
-                uri:
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTttVuZJb7dABxNTs-y5MHOYfRd1vUM42V3-g&usqp=CAU",
-              }}
-            />
-            <Text>Autor: Grupo 2</Text>
+            <Text> Grupo 2</Text>
           </View>
         </View>
 
